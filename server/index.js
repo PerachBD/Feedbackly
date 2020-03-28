@@ -18,7 +18,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require("./routes/authRoutes")(app);
-
+//npx create-react-app client
 mongoose.connect(keys.mongoURI);
 
 const PORT = process.env.PORT || 5000;
