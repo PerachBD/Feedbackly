@@ -11,5 +11,6 @@ import reducers from './reducers';
 const store = createStore(reducers, {} ,applyMiddleware(reduuxThunk))
 
 reactDom.render(
-<Provider store = {store}><App/></Provider>, 
-document.querySelector('#root'));
+    <Provider store = {store}><App/></Provider>, 
+    document.querySelector('#root')
+);
