@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === 'production'){
 }
 
 //npx create-react-app client
-mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
+mongoose.connect(keys.mongoURI);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
