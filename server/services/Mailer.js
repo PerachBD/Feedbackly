@@ -9,7 +9,7 @@ class Mailer extends helper.Mail{
         this.sgApi = sendgrid(keys.sendGridKey);
         this.from_email = new helper.Email('perach13@gmail.com');
         this.subject = subject;
-        this.body = new helper.content('text/html',content);
+        this.body = new helper.Content('text/html',content);
         this.recipients = this.formatAddresses(recipients);
 
         this.addContent(this.body);
@@ -19,13 +19,13 @@ class Mailer extends helper.Mail{
 
     formatAddresses(recipients){
         return recipients.map(({email})=>{
-            return new halper.Email(email);
+            return new helper.Email(email);
         });
     }
 
     addClickTracking(){
-        const trackingSettings = new halper.TrackingSettings();
-        const clickTracking = new halper.ClickTracking(true,true);
+        const trackingSettings = new helper.TrackingSettings();
+        const clickTracking = new helper.ClickTracking(true,true);
 
         trackingSettings.setClickTracking(clickTracking);
         this.addTrackingSettings(trackingSettings);
@@ -45,7 +45,7 @@ class Mailer extends helper.Mail{
             path: '/v3/mail/send',
             body: this.toJSON()
         });
-        const response = await this.sgApi.API(Request);
+        const response = await this.sgApi.API(request);
         return response;
     }
 }
