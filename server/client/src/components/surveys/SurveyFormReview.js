@@ -4,8 +4,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import formField from './formFields';
 import * as actions from "../../actions"
+import {withRouter} from 'react-router-dom';
 
-const SurveyFormReview = ({onCancel, formValues, submitSurvey}) =>{
+const SurveyFormReview = ({onCancel, formValues, submitSurvey, history}) =>{
     const reviewFields = _.map(formField, ({name,label}) => {
         return(
             <div key = {name}>
@@ -27,7 +28,7 @@ const SurveyFormReview = ({onCancel, formValues, submitSurvey}) =>{
             >Back
             </button>
             <button 
-                onClick={() => submitSurvey(formValues)}
+                onClick={() => submitSurvey(formValues, history)}
                 className="lime btn flat right"
             >
                 Send Survey
@@ -41,4 +42,4 @@ function mapStateProps(state){
     return{ formValues: state.form.surveyForm.values };
 }
 
-export default connect(mapStateProps, actions)(SurveyFormReview);
+export default connect(mapStateProps, actions)(withRouter(SurveyFormReview));
