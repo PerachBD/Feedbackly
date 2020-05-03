@@ -12,7 +12,7 @@ const Survey = mongoose.model('surveys');
 module.exports = app => {
     app.get('/api/surveys', requireLogin, async (req,res) => {
         const surveys = await Survey.find({ _user:req.user.id })
-            .select({recipients: false});
+            .select({recipients: false});//return serveys without recipients
 
         res.send(surveys);
     });
@@ -25,9 +25,11 @@ module.exports = app => {
         const p = new Path('/api/surveys/:surveyId/:choice');
         _.chain(req.body)
             .map( ({email, url}) => {
-                const match = p.test(new URL(url).pathname);
-                if (match){
-                    return {email, surveyId: match.surveyId, choice: match.choice};
+                if(url){
+                    const match = p.test(new URL(url).pathname);
+                    if (match){
+                        return {email, surveyId: match.surveyId, choice: match.choice};
+                    }
                 }
             })
             .compact()//remove all the undefined elements
@@ -45,7 +47,6 @@ module.exports = app => {
                 }).exec();
             })
             .value();
-        
         res.send({});
     });
 
