@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import { fetchSurveys} from '../../actions';
+import GoogleChart from './GoogleChart';
+
 
 class SurveyList extends Component{
     componentDidMount(){
@@ -20,9 +22,10 @@ class SurveyList extends Component{
                             Sent On :{new Date(survey.dateSent).toLocaleDateString()}
                         </p>
                     </div>
-                    <div className = "card-action">
+                    <div className = "card-action center">
                         <a>Yes: {survey.yes}</a>
                         <a>No: {survey.no}</a>
+                        <GoogleChart yes={survey.yes} no={survey.no}/>
                     </div>
                 </div>
             );
@@ -32,9 +35,10 @@ class SurveyList extends Component{
     render(){
         return(
             <div>
+                
                 {this.renderSurveys()}
+                
             </div>
-
         );
     }
 }
@@ -45,4 +49,3 @@ function mapStateToProps({surveys}){
 
 export default connect(mapStateToProps, {fetchSurveys} )(SurveyList);
 
-//
