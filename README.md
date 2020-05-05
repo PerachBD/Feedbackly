@@ -49,7 +49,8 @@ You will need to replace <PASSWORD> with the database user's actual password cre
   <li>stripe: Handle credit cards and receive payments from users</li>
   <li>cookie-session: Simple cookie-based session middleware.</li>
   <li>sendgrid: Allow quick integration between SendGrid and a project, SendGrid is a communication platform for transactional and marketing email. </li>
-  
 </ul>
+
+![screenshots](Feedbackly_web_screenshots.png)
 
 
