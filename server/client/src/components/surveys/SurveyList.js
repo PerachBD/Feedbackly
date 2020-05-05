@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { fetchSurveys} from '../../actions';
+import { fetchSurveys, deleteSurvey} from '../../actions';
 import GoogleChart from './GoogleChart';
 
 
-class SurveyList extends Component{
+class SurveyList extends Component {
     componentDidMount(){
         this.props.fetchSurveys();
     }
@@ -23,10 +23,17 @@ class SurveyList extends Component{
                         </p>
                     </div>
                     <div className = "card-action center">
+                        <button 
+                            className="pink-text right transparent"
+                            onClick={() => deleteSurvey(survey)}
+                        >
+                            Delete survey
+                            <i className="material-icons right">delete</i>
+                        </button>
                         <a>Yes: {survey.yes}</a>
                         <a>No: {survey.no}</a>
                         <GoogleChart yes={survey.yes} no={survey.no}/>
-                        <button class="right material-icons">delete</button>
+                        
                     </div>
                 </div>
             );
@@ -36,9 +43,7 @@ class SurveyList extends Component{
     render(){
         return(
             <div>
-                
                 {this.renderSurveys()}
-                
             </div>
         );
     }

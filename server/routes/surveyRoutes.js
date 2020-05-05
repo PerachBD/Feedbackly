@@ -79,4 +79,10 @@ module.exports = app => {
             res.status(422).send(err);
         }
     });
+
+    app.post('/api/surveys/deleteSurvey',requireLogin,(req, res) => {
+        res.send('hh!');
+        console.log(req)
+        res.send(req);
+    });
 };
