@@ -28,3 +28,28 @@ You will need to replace <PASSWORD> with the database user's actual password cre
     <li>Finished, everything is ready. Run from cmd "npm run dev"</li>
   </ol>
 </p>
+
+<h2>Tecnolegis:</h2>
+<p></p>
+<ul>
+  <li>NodeJS </li>
+  <li>React</li>
+  <li>Redux</li>
+  <li>Express</li>
+  <li>MongoDB</li>
+</ul>
+<p>
+  <strong>Main packages</strong>
+</p>
+<ul>
+  <li>mongoose: Communicate data from Mongo database to React application.</li>
+  <li>react-router-dom: route user requests on the front</li>
+  <li>express: route user requests on the backend</li>
+  <li>redux-form: Build reusable user inputs</li>
+  <li>stripe: Handle credit cards and receive payments from users</li>
+  <li>cookie-session: Simple cookie-based session middleware.</li>
+  <li>sendgrid: Allow quick integration between SendGrid and a project, SendGrid is a communication platform for transactional and marketing email. </li>
+  
+</ul>
+
+
