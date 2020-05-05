@@ -26,6 +26,7 @@ class SurveyList extends Component{
                         <a>Yes: {survey.yes}</a>
                         <a>No: {survey.no}</a>
                         <GoogleChart yes={survey.yes} no={survey.no}/>
+                        <button class="right material-icons">delete</button>
                     </div>
                 </div>
             );
