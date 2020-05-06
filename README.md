@@ -11,6 +11,10 @@
 
 <h2>Architecture</h2>
 <p></p>
+<p><h3>Login Flow</h3></p>
+
+![Login_diagram](Documentation/SignUp_and_LogIn_diagram.png)
+
 <p><h3>Payment Flow</h3></p>
 
 ![Payment_diagram](Documentation/Payment_diagram.png)
