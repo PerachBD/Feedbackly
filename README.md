@@ -15,6 +15,10 @@
 
 ![Payment_diagram](Documentation/Payment_diagram.png)
 
+<p><h3>Login Flow</h3></p>
+
+![Login_diagram](Documentation/SignUp_and_LogIn_diagram.png)
+
 <h2>Tecnolegis:</h2>
 <p></p>
 <ul>
