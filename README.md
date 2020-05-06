@@ -13,7 +13,7 @@
 <p></p>
 <p><h3>Login Flow</h3></p>
 
-![Login_diagram](Documentation/SignUp_and_LogIn_diagram.png)
+![Login_diagram](Documentation/Login_and_Logout_diagram.png)
 
 <p><h3>Payment Flow</h3></p>
 
