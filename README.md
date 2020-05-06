@@ -19,6 +19,11 @@
 
 ![Payment_diagram](Documentation/Payment_diagram.png)
 
+<p><h3>Sending Survey Flow</h3></p>
+
+![Payment_diagram](Documentation/Submit_survey_diagram.png)
+
+
 <h2>Tecnolegis:</h2>
 <p></p>
 <ul>
