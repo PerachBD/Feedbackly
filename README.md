@@ -9,6 +9,11 @@
   <li>View the surveys you created and keep up to date with the results.</li>
 </ul>
 
+<h2>Architecture</h2>
+<p></p>
+<p>Billing Flow Diagram</p>
+![screenshots](Documentation/Payment_diagram.png)
+
 <h2>Tecnolegis:</h2>
 <p></p>
 <ul>
@@ -52,6 +57,5 @@ You will need to replace <PASSWORD> with the database user's actual password cre
 </p>
 
 ![screenshots](Documentation/web_screenshots.png)
-![screenshots](Documentation/Payment_Diagram.png)
 
 
