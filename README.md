@@ -51,6 +51,7 @@ You will need to replace <PASSWORD> with the database user's actual password cre
   </ol>
 </p>
 
-![screenshots](web_screenshots.png)
+![screenshots](Documentation/web_screenshots.png)
+![screenshots](Documentation/Payment_Diagram.png)
 
 
