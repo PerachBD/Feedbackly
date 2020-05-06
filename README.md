@@ -11,8 +11,9 @@
 
 <h2>Architecture</h2>
 <p></p>
-<p>Billing Flow Diagram</p>
-![screenshots](Documentation/Payment_diagram.png)
+<p><h3>Payment Flow</h3></p>
+
+![Payment_diagram](Documentation/Payment_diagram.png)
 
 <h2>Tecnolegis:</h2>
 <p></p>
