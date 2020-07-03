@@ -61,7 +61,7 @@ You will need to replace <PASSWORD> with the database user's actual password cre
     <li>Create a user at https://stripe.com/ and Get your test API keys (Publishable key, Secret key) and place them in the appropriate places (stripePublishableKey, stripeSecretKey) in dev.js.</li>
     <li>Sign up for https://sendgrid.com/ and the API Key add to the dev.js file in the appropriate key (sendGridKey)</li>
     <li>In the keys.js file, update the redirectDomain key value to 'http: // localhost: 3000'.</li>
-    <li>Run in cmd "ngrok http 5000" and the latest address starting with https should be pasted in Event Webhook on the Strip site.</li>
+    <li>Run in cmd "ngrok http 5000" and the latest address starting with https should be pasted in Event Webhook on the sendGrid site in "Mail Settings".</li>
     <li>Finished, everything is ready. Run from cmd "npm run dev"</li>
   </ol>
 </p>
