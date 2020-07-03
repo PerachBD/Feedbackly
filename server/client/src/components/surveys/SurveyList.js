@@ -25,7 +25,7 @@ class SurveyList extends Component {
                     <div className = "card-action center">
                         <button 
                             className="pink-text right transparent"
-                            onClick={() => deleteSurvey(survey)}
+                            onClick={() => this.props.deleteSurvey(survey)}
                         >
                             Delete survey
                             <i className="material-icons right">delete</i>
@@ -53,5 +53,5 @@ function mapStateToProps({surveys}){
     return{ surveys };
 }
 
-export default connect(mapStateToProps, {fetchSurveys} )(SurveyList);
+export default connect(mapStateToProps, {fetchSurveys,deleteSurvey} )(SurveyList);
 

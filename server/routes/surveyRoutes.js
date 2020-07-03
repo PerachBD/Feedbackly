@@ -26,7 +26,6 @@ module.exports = app => {
         _.chain(req.body)
             .map( ({email, url}) => {
                 if(url){
-                    console.log(req.body);
                     const match = p.test(new URL(url).pathname);
                     if (match){
                         return {email, surveyId: match.surveyId, choice: match.choice};
@@ -80,9 +79,8 @@ module.exports = app => {
         }
     });
 
-    app.post('/api/surveys/deleteSurvey',requireLogin,(req, res) => {
-        res.send('hh!');
-        console.log(req)
-        res.send(req);
+    app.post('/api/surveys/deleteSurvey',requireLogin, async (req, res) => {
+        await Survey.deleteOne({_id:req.body._id});
+        res.status(200).end();
     });
 };
