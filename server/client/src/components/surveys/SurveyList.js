@@ -24,7 +24,7 @@ class SurveyList extends Component {
                     </div>
                     <div className = "card-action center">
                         <button 
-                            className="pink-text right transparent"
+                            className="white-text right red"
                             onClick={() => this.props.deleteSurvey(survey)}
                         >
                             Delete survey
